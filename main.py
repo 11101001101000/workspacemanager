@@ -22,9 +22,18 @@ while end == 0:
     if a == '2':
         nd = input ('new dir name: ')
         if os == win:
-            exec.system ('md ' + hd + '\' + nd)
+            exec.system ('md ' + hd + '\\' + nd)
         elif os == 'linux':
             exec.system ('mkdir ' + hd + '/' + nd)
+    if a == '3':
+        rd = input ('dir name: ')
+        if os == win:
+            exec.system ('del ' + hd + '\\' + rd)
+        elif os == 'linux':
+            if hd == '/':
+                print ('the root dir cannot be removed')
+            else:
+                exec.system ('rm -rf ' + hd + '/' + rd)
     if a == '4':
         os = 0
     if a == '5':
