@@ -17,6 +17,14 @@ while end == 0:
     if a == '1':
         if os == 'win':
             exec.system ('dir ' + hd)
+        if os == 'linux':
+            exec.system ('ls ' + hd)
+    if a == '2':
+        nd = input ('new dir name: ')
+        if os == win:
+            exec.system ('md ' + hd + '\' + nd)
+        elif os == 'linux':
+            exec.system ('mkdir ' + hd + '/' + nd)
     if a == '4':
         os = 0
     if a == '5':
